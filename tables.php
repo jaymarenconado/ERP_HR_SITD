@@ -97,6 +97,9 @@
                   <th>First Name</th>
                   <th>Gender</th>
                   <th>Age</th>
+                  <th>Contact Number</th>
+                  <th>Address</th>
+                  <th>Action</th>
                 </tr>
               </thead>
 
@@ -108,12 +111,18 @@
                     $result = mysqli_query($db,$query);
 
                     $n = 1;  while ($row = mysqli_fetch_array($result)) {
+                      $e_id = $row['id'];
                   ?>
                   <td><?php echo $n.'.';?></td>
                   <td><?php echo $row['lastname'];?></td>
                   <td><?php echo $row['firstname'];?></td>
                   <td><?php echo $row['gender'];?></td>
                   <td><?php echo $row['age'];?></td>
+                  <td><?php echo $row['contact_no'];?></td>
+                  <td><?php echo $row['address'];?></td>
+                  <td><a href="" data-toggle="modal" data-target="#edit">Update</a> / 
+                      <a href="">Terminate</a>
+                  </td>
                 </tr>
                 <?php $n++; } ?>
               </tbody>
@@ -122,6 +131,8 @@
         </div>
         
     </div>
+
+
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
     <footer class="sticky-footer">
@@ -133,8 +144,8 @@
     </footer>
 
     <!-- Button trigger modal -->
-    <button class="btn btn-danger" style="float: right;" data-toggle="modal" data-target="#myModal">Recruit<i class="fa fa-fw fa-sign-in"></i></button>
-    <a href="tables.php" class="btn btn-primary">Refresh<i class="fa fa-fw fa-arrow-up"></i></a>
+    <button class="btn btn-default" style="float: right;" data-toggle="modal" data-target="#myModal">Recruit<i class="fa fa-fw fa-plus"></i></button>
+    <a href="tables.php" class="btn btn-primary">Refresh<i class="fa fa-fw fa-refresh"></i></a>
 
 
     <!-- Modal -->
@@ -142,22 +153,40 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5>Add new<i class="fa fa-fw fa-sign-in"></i></h5>
+            <h5>Add new<i class="fa fa-fw fa-plus"></i></h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             
           </div>
           <div class="modal-body">
             
             <form method="post">
+              <div class="row">
                 <div class="form-group">
+                  <div class="col-lg-12">
                     <label for="exampleInputEmail1">First name</label>
                     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="First name" name="fname" required="">
+                    </div>
                 </div>
                 <div class="form-group">
+                  <div class="col-lg-12">
                     <label for="exampleInputPassword1">Last name</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Last name" name="lname" required="">
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Last name" name="lname" required>
+                    </div>
                 </div>
-
+                
+                <div class="form-group">
+                  <div class="col-lg-12">
+                    <label for="number">Contact Number</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Contact Number" name="phone" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-lg-12">
+                    <label for="add">Address</label>
+                    <input type="text" class="form-control" id="address" placeholder="Address" name="address" required>
+                    </div>
+                </div>
+                </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Age</label>
                     <input type="number" max="50" min="18" id="exampleInputPassword1" value="18" name="age" >
@@ -168,6 +197,25 @@
                     <input type="radio" name="gender" value="Male">Male</input>&nbsp&nbsp&nbsp
                     <input type="radio" name="gender" value="Female">Female</input>
                 </div>
+
+                <div class="row">
+                <div class="form-group">
+
+                  <div class="col-lg-12">
+                    <label for="username">Username</label>
+                    <input style="width: 100%;" type="text" class="form-control" id="username" placeholder="Username" name="emp_username" required>
+                  </div>
+                 
+                </div>
+                <div class="form-group"> 
+                    <div class="col-lg-12">
+                  <label for="exampleInputPassword1">Password</label>
+                    <input style="width: 100%;" type="password" class="form-control" id="password" placeholder="Password" name="emp_password" required>
+                     </div>
+                </div>
+                 </div>
+
+
             
 
           </div>
@@ -182,8 +230,12 @@
                   $lastname=$_POST['lname'];
                   $age=$_POST['age'];
                   $gender=$_POST['gender'];
+                  $emp_username = $_POST['emp_username'];
+                  $emp_password = $_POST['emp_password'];
+                  $address = $_POST['address'];
+                  $phone = $_POST['phone'];
 
-                  $query = "INSERT INTO list_employee (firstname,lastname,gender,age,username,password) VALUES ('$firstname','$lastname','$gender','$age','$firstname','$firstname')";
+                  $query = "INSERT INTO list_employee (firstname,lastname,contact_no,address,gender,age,username,password) VALUES ('$firstname','$lastname','$phone','$address','$gender','$age','$emp_username','$emp_password')";
                   mysqli_query($db,$query);
                   
                 }
