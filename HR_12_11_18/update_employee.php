@@ -44,7 +44,17 @@
           <a class="nav-link" href="tables.php">
             <i class="fa fa-fw fa-user"></i>
             <span class="nav-link-text">List of Employee</span>
-          </a>    
+          </a>   
+         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="attendance.php">
+            <i class="fa fa-fw fa-calendar"></i>
+            <span class="nav-link-text">Attendance</span>
+          </a> 
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="traning.php">
+            <i class="fa fa-fw fa-list"></i>
+            <span class="nav-link-text">Leaves</span>
+          </a>   
       </ul>
 
       <ul class="navbar-nav sidenav-toggler">
@@ -76,58 +86,20 @@
         <li class="breadcrumb-item">
           <a href="#">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">List of Employee<i class="fa fa-fw fa-user"></i></li>
+        <li class="breadcrumb-item active">List of Employee / Update<i class="fa fa-fw fa-user"></i></li>
       </ol>
-                          <?php
-                              $e_id = $_GET['id'];
-                              $db = mysqli_connect("localhost","root","","hr_db");
-                              $query00 = "select * from list_employee where id='$e_id'";
-                              $result00 = mysqli_query($db,$query00);
+      <!-- Example DataTables Card-->
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> List of Employee</div>
+        <div class="card-body">
+          <div class="table-responsive">
+          </div>
+        </div>
+        
+    </div>
 
-                              while ($row00 = mysqli_fetch_array($result00)) {
-                                $fname = $row00['firstname'];
-                                $lname = $row00['lastname'];
-                                $con = $row00['contact_no'];
-                                $address = $row00['address'];
-                                $age = $row00['age'];
-                              }
-                          ?>
-                          <div class="modal-body">
-                                 <form method="post">
-                                  <div class="row">
-                                    <div class="form-group">
-                                      <div class="col-lg-12">
-                                        <label for="exampleInputEmail1">First name</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="First name" name="fname" required="" value="<?php echo $fname;?>">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                      <div class="col-lg-12">
-                                        <label for="exampleInputPassword1">Last name</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Last name" name="lname" required value="<?php echo $lname;?>"">
-                                        </div>
-                                    </div>                                   
-                                    <div class="form-group">
-                                      <div class="col-lg-12">
-                                        <label for="number">Contact Number</label>
-                                        <input type="tel" class="form-control" id="phone" placeholder="Contact Number" name="phone" required value="<?php echo $con;?>"">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                      <div class="col-lg-12">
-                                        <label for="add">Address</label>
-                                        <input type="text" class="form-control" id="address" placeholder="Address" name="address" required value="<?php echo $address;?>"">
-                                        </div>
-                                    </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Age</label>
-                                        <input type="number" max="50" min="18" id="exampleInputPassword1" name="age" value="<?php echo $age;?>"">
-                                    </div>
-                                    <div class="row">
-                                  </div>
-                              </div>
-                              </form>
+
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
     <footer class="sticky-footer">
@@ -137,6 +109,70 @@
         </div>
       </div>
     </footer>
+
+
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5>Add new<i class="fa fa-fw fa-plus"></i></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            
+          </div>
+          <div class="modal-body">
+
+            <form method="post">
+              <div class="row">
+                <div class="form-group">
+                  <div class="col-lg-12">
+                    <label for="exampleInputEmail1">First name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="First name" name="fname" required="">
+                    </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-lg-12">
+                    <label for="exampleInputPassword1">Last name</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Last name" name="lname" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                  <div class="col-lg-12">
+                    <label for="number">Contact Number</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Contact Number" name="phone" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-lg-12">
+                    <label for="add">Address</label>
+                    <input type="text" class="form-control" id="address" placeholder="Address" name="address" required>
+                    </div>
+                </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Age</label>
+                    <input type="number" max="50" min="18" id="exampleInputPassword1" value="18" name="age" >
+                </div>
+
+                <div class="form-group">
+                    <label>Gender</label><br>
+                    <input type="radio" name="gender" value="Male">Male</input>&nbsp&nbsp&nbsp
+                    <input type="radio" name="gender" value="Female">Female</input>
+                </div>
+
+
+            
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+              <input type="submit" value="Add New" name="submit" class="btn btn-primary btn-block">
+            </form>
+     
+        </div>
+      </div>
+    </div>
+
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
@@ -160,7 +196,6 @@
         </div>
       </div>
     </div>
-
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
