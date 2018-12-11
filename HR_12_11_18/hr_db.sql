@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 04, 2018 at 08:16 AM
+-- Generation Time: Dec 11, 2018 at 04:06 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -21,6 +21,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `hr_db`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `benefits`
+--
+
+CREATE TABLE `benefits` (
+  `id` int(11) NOT NULL,
+  `Pag_ibig` varchar(255) NOT NULL,
+  `SSS` varchar(255) NOT NULL,
+  `Philhealth` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `benefits`
+--
+
+INSERT INTO `benefits` (`id`, `Pag_ibig`, `SSS`, `Philhealth`) VALUES
+(1, '250', '250', '300');
 
 -- --------------------------------------------------------
 
@@ -44,11 +64,9 @@ CREATE TABLE `list_employee` (
 --
 
 INSERT INTO `list_employee` (`id`, `firstname`, `lastname`, `contact_no`, `address`, `gender`, `age`, `username`) VALUES
-(5, 'Ian Ireneo', 'Oropesa Jr.', '', '', 'Male', 18, 'Ian Ireneo'),
-(6, 'Adrian', 'Lopez', '', '', 'Male', 50, 'Adrian'),
-(7, 'Ian', 'Alcaraz', '', '', 'Female', 45, 'Ian'),
-(8, 'Ruel', 'Villarobin', '+639752777861', 'qwe', 'Male', 18, 'Stib'),
-(9, 'Ian', 'Oropesa', '09057281580', 'Nasugbu, Batangas', 'Male', 18, 'IO-09057');
+(8, 'Ruel1', 'Villarobin23', '+639752777861', 'qwe1', 'Male', 18, 'Stib'),
+(9, 'Ian', 'Oropesa', '09057281580', 'Nasugbu, Batangas', 'Male', 18, 'IO-09057'),
+(10, 'Elton', 'Ronds', '+6390554561122', 'qwe12323', 'Male', 18, 'ER-+6390');
 
 -- --------------------------------------------------------
 
@@ -68,6 +86,25 @@ CREATE TABLE `login` (
 
 INSERT INTO `login` (`id`, `username`, `password`) VALUES
 (1, 'admin', 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `positionandsalary`
+--
+
+CREATE TABLE `positionandsalary` (
+  `id` int(11) NOT NULL,
+  `position` varchar(255) NOT NULL,
+  `rate` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `positionandsalary`
+--
+
+INSERT INTO `positionandsalary` (`id`, `position`, `rate`) VALUES
+(1, 'Manager', '500');
 
 -- --------------------------------------------------------
 
@@ -92,11 +129,17 @@ INSERT INTO `table_timelog` (`id`, `g_id`, `g_date`, `time_in`, `time_out`) VALU
 (3, 2, '2017-12-19', '11:17:55', '20:18:12'),
 (4, 1, '2017-12-20', '11:25:21', '11:27:15'),
 (5, 2, '2017-12-20', '01:51:41', '01:51:54'),
-(6, 9, '2018-12-04', '02:05:37', '02:06:21');
+(12, 10, '2018-12-11', '02:53:30', '10:53:57');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `benefits`
+--
+ALTER TABLE `benefits`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `list_employee`
@@ -111,6 +154,12 @@ ALTER TABLE `login`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `positionandsalary`
+--
+ALTER TABLE `positionandsalary`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `table_timelog`
 --
 ALTER TABLE `table_timelog`
@@ -121,10 +170,16 @@ ALTER TABLE `table_timelog`
 --
 
 --
+-- AUTO_INCREMENT for table `benefits`
+--
+ALTER TABLE `benefits`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `list_employee`
 --
 ALTER TABLE `list_employee`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `login`
@@ -133,10 +188,16 @@ ALTER TABLE `login`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `positionandsalary`
+--
+ALTER TABLE `positionandsalary`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `table_timelog`
 --
 ALTER TABLE `table_timelog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
