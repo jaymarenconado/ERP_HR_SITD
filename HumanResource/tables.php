@@ -44,7 +44,17 @@
           <a class="nav-link" href="tables.php">
             <i class="fa fa-fw fa-user"></i>
             <span class="nav-link-text">List of Employee</span>
-          </a>    
+          </a>   
+         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="attendance.php">
+            <i class="fa fa-fw fa-calendar"></i>
+            <span class="nav-link-text">Attendance</span>
+          </a> 
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="traning.php">
+            <i class="fa fa-fw fa-list"></i>
+            <span class="nav-link-text">Leaves</span>
+          </a>   
       </ul>
 
       <ul class="navbar-nav sidenav-toggler">
@@ -115,25 +125,17 @@
                   <td><?php echo $row['age'];?></td>
                   <td><?php echo $row['contact_no'];?></td>
                   <td><?php echo $row['address'];?></td>
-                  <td><a href="edit_user_info.php?id=<?php echo $e_id;?>">Update</a> / 
+                  <td><a href="update_emp.php?id=<?php echo $e_id;?>">Update</a> / 
                       <a href="">Terminate</a>
                   </td>
                 </tr>
-
-
                 <?php $n++; } ?>
               </tbody>
             </table>
           </div>
-        </div>  
+        </div>
+        
     </div>
-
-
-
-
-
-
-
 
 
     <!-- /.container-fluid-->
@@ -147,11 +149,11 @@
     </footer>
 
     <!-- Button trigger modal -->
-    <button class="btn btn-info" style="float: right;" data-toggle="modal" data-target="#myModal">Recruit<i class="fa fa-fw fa-plus"></i></button>
+    <button class="btn btn-default" style="float: right;" data-toggle="modal" data-target="#myModal">Recruit<i class="fa fa-fw fa-plus"></i></button>
     <a href="tables.php" class="btn btn-primary">Refresh<i class="fa fa-fw fa-refresh"></i></a>
 
 
-    <!-- Add new Employee -->
+    <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -161,7 +163,7 @@
             
           </div>
           <div class="modal-body">
-            
+
             <form method="post">
               <div class="row">
                 <div class="form-group">
@@ -201,23 +203,6 @@
                     <input type="radio" name="gender" value="Female">Female</input>
                 </div>
 
-                <div class="row">
-                <div class="form-group">
-
-                  <div class="col-lg-12">
-                    <label for="username">Username</label>
-                    <input style="width: 100%;" type="text" class="form-control" id="username" placeholder="Username" name="emp_username" required>
-                  </div>
-                 
-                </div>
-                <div class="form-group"> 
-                    <div class="col-lg-12">
-                  <label for="exampleInputPassword1">Password</label>
-                    <input style="width: 100%;" type="password" class="form-control" id="password" placeholder="Password" name="emp_password" required>
-                     </div>
-                </div>
-                 </div>
-
 
             
 
@@ -233,12 +218,11 @@
                   $lastname=$_POST['lname'];
                   $age=$_POST['age'];
                   $gender=$_POST['gender'];
-                  $emp_username = $_POST['emp_username'];
-                  $emp_password = $_POST['emp_password'];
                   $address = $_POST['address'];
                   $phone = $_POST['phone'];
+                  $emp_username = $firstname[0].$lastname[0]."-".$phone[0].$phone[1].$phone[2].$phone[3].$phone[4];
 
-                  $query = "INSERT INTO list_employee (firstname,lastname,contact_no,address,gender,age,username,password) VALUES ('$firstname','$lastname','$phone','$address','$gender','$age','$emp_username','$emp_password')";
+                  $query = "INSERT INTO list_employee (firstname,lastname,contact_no,address,gender,age,username) VALUES ('$firstname','$lastname','$phone','$address','$gender','$age','$emp_username')";
                   mysqli_query($db,$query);
                   
                 }
@@ -273,12 +257,6 @@
         </div>
       </div>
     </div>
-
-
-
-
-
-
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

@@ -43,7 +43,17 @@
           <a class="nav-link" href="tables.php">
             <i class="fa fa-fw fa-user"></i>
             <span class="nav-link-text">List of Employee</span>
-          </a>   
+          </a> 
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="attendance.php">
+            <i class="fa fa-fw fa-calendar"></i>
+            <span class="nav-link-text">Attendance</span>
+          </a>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="traning.php">
+            <i class="fa fa-fw fa-list"></i>
+            <span class="nav-link-text">Leaves</span>
+          </a>  
     
       </ul>
       <ul class="navbar-nav ml-auto">

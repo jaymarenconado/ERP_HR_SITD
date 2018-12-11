@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 20, 2018 at 08:13 AM
+-- Generation Time: Dec 04, 2018 at 08:16 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -36,19 +36,19 @@ CREATE TABLE `list_employee` (
   `address` varchar(255) NOT NULL,
   `gender` varchar(250) NOT NULL,
   `age` int(11) NOT NULL,
-  `username` varchar(250) NOT NULL,
-  `password` varchar(250) NOT NULL
+  `username` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `list_employee`
 --
 
-INSERT INTO `list_employee` (`id`, `firstname`, `lastname`, `contact_no`, `address`, `gender`, `age`, `username`, `password`) VALUES
-(5, 'Ian Ireneo', 'Oropesa Jr.', '', '', 'Male', 18, 'Ian Ireneo', 'Ian Ireneo'),
-(6, 'Adrian', 'Lopez', '', '', 'Male', 50, 'Adrian', 'Adrian'),
-(7, 'Ian', 'Alcaraz', '', '', 'Female', 45, 'Ian', 'Ian'),
-(8, 'Ruel', 'Villarobin', '+639752777861', 'qwe', 'Male', 18, 'Stib', 'Stib');
+INSERT INTO `list_employee` (`id`, `firstname`, `lastname`, `contact_no`, `address`, `gender`, `age`, `username`) VALUES
+(5, 'Ian Ireneo', 'Oropesa Jr.', '', '', 'Male', 18, 'Ian Ireneo'),
+(6, 'Adrian', 'Lopez', '', '', 'Male', 50, 'Adrian'),
+(7, 'Ian', 'Alcaraz', '', '', 'Female', 45, 'Ian'),
+(8, 'Ruel', 'Villarobin', '+639752777861', 'qwe', 'Male', 18, 'Stib'),
+(9, 'Ian', 'Oropesa', '09057281580', 'Nasugbu, Batangas', 'Male', 18, 'IO-09057');
 
 -- --------------------------------------------------------
 
@@ -92,7 +92,7 @@ INSERT INTO `table_timelog` (`id`, `g_id`, `g_date`, `time_in`, `time_out`) VALU
 (3, 2, '2017-12-19', '11:17:55', '20:18:12'),
 (4, 1, '2017-12-20', '11:25:21', '11:27:15'),
 (5, 2, '2017-12-20', '01:51:41', '01:51:54'),
-(6, 8, '2018-11-20', '02:19:54', '11:22:15');
+(6, 9, '2018-12-04', '02:05:37', '02:06:21');
 
 --
 -- Indexes for dumped tables
@@ -124,7 +124,7 @@ ALTER TABLE `table_timelog`
 -- AUTO_INCREMENT for table `list_employee`
 --
 ALTER TABLE `list_employee`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `login`

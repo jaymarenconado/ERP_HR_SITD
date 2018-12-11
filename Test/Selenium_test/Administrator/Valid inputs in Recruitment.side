@@ -1,0 +1,229 @@
+{
+  "id": "432af19d-8b56-41ef-a081-fad21b151587",
+  "version": "1.1",
+  "name": "RECRUIT",
+  "url": "http://localhost",
+  "tests": [{
+    "id": "b1397c8d-1f05-4d28-b531-ff698e43093f",
+    "name": "Valid inputs in recruitment",
+    "commands": [{
+      "id": "4666a657-6fe9-4916-af75-e9741d08b2e3",
+      "comment": "",
+      "command": "open",
+      "target": "/HumanResource/tables.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "732cd1f7-bd1a-41b3-8dc0-fdbc87cbbb96",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c06e2ce4-784e-46d6-9296-1d8e4d1d7fa2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-default > .fa",
+      "targets": [
+        ["css=.btn-default > .fa", "css:finder"],
+        ["xpath=//body[@id='page-top']/div/div/button/i", "xpath:idRelative"],
+        ["xpath=//button/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e329c6b2-c3cd-4142-ba15-bbc99f43b0a8",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.btn-default > .fa",
+      "targets": [
+        ["css=.btn-default > .fa", "css:finder"],
+        ["xpath=//body[@id='page-top']/div/div/button/i", "xpath:idRelative"],
+        ["xpath=//button/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7fc236bb-9e60-4329-949b-6f0a3bf53e92",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.btn-default > .fa",
+      "targets": [
+        ["css=.btn-default > .fa", "css:finder"],
+        ["xpath=//body[@id='page-top']/div/div/button/i", "xpath:idRelative"],
+        ["xpath=//button/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "317869ce-27a3-4252-a1f7-89cc83ad61b6",
+      "comment": "",
+      "command": "click",
+      "target": "id=exampleInputEmail1",
+      "targets": [
+        ["id=exampleInputEmail1", "id"],
+        ["name=fname", "name"],
+        ["css=#exampleInputEmail1", "css"],
+        ["css=#exampleInputEmail1", "css:finder"],
+        ["xpath=//input[@id='exampleInputEmail1']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/div/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff91630e-df14-4cec-9aac-8f55942b1ee5",
+      "comment": "",
+      "command": "type",
+      "target": "id=exampleInputEmail1",
+      "targets": [
+        ["id=exampleInputEmail1", "id"],
+        ["name=fname", "name"],
+        ["css=#exampleInputEmail1", "css"],
+        ["css=#exampleInputEmail1", "css:finder"],
+        ["xpath=//input[@id='exampleInputEmail1']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/div/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Nickey Shene"
+    }, {
+      "id": "1f308ba1-535b-4d74-9b6b-dce2a49a457c",
+      "comment": "",
+      "command": "click",
+      "target": "id=exampleInputPassword1",
+      "targets": [
+        ["id=exampleInputPassword1", "id"],
+        ["name=lname", "name"],
+        ["css=#exampleInputPassword1", "css"],
+        ["css=.col-lg-12 > #exampleInputPassword1", "css:finder"],
+        ["xpath=//input[@id='exampleInputPassword1']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/div/div[2]/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2de528a-a67d-4dfa-86ae-f21d5de47cd0",
+      "comment": "",
+      "command": "type",
+      "target": "id=exampleInputPassword1",
+      "targets": [
+        ["id=exampleInputPassword1", "id"],
+        ["name=lname", "name"],
+        ["css=#exampleInputPassword1", "css"],
+        ["css=.col-lg-12 > #exampleInputPassword1", "css:finder"],
+        ["xpath=//input[@id='exampleInputPassword1']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/div/div[2]/form/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Rosales"
+    }, {
+      "id": "70777536-5098-424c-b67e-89aeb6e43178",
+      "comment": "",
+      "command": "click",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/div/div[2]/form/div/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "65c36f54-5120-4a1b-805c-3238a0d08066",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/div/div[2]/form/div/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": "09654097565"
+    }, {
+      "id": "2005c68d-b58a-4c91-8491-ee5fb4d1234d",
+      "comment": "",
+      "command": "click",
+      "target": "id=address",
+      "targets": [
+        ["id=address", "id"],
+        ["name=address", "name"],
+        ["css=#address", "css"],
+        ["css=#address", "css:finder"],
+        ["xpath=//input[@id='address']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/div/div[2]/form/div/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f816a14-fbd7-425c-ac7b-ca9285a8ea57",
+      "comment": "",
+      "command": "type",
+      "target": "id=address",
+      "targets": [
+        ["id=address", "id"],
+        ["name=address", "name"],
+        ["css=#address", "css"],
+        ["css=#address", "css:finder"],
+        ["xpath=//input[@id='address']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/div/div[2]/form/div/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": "Bungahan, Lian, Batangas"
+    }, {
+      "id": "7f682f41-c585-40b2-8435-73eeaf80f05a",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(4)",
+      "targets": [
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=(//input[@name='gender'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/div/div[2]/form/div[3]/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "23868d9a-54d3-465b-bf0e-218c9b8acd4a",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit",
+      "targets": [
+        ["name=submit", "name"],
+        ["css=input[name=\"submit\"]", "css"],
+        ["css=.btn-block", "css:finder"],
+        ["xpath=//input[@name='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div/div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d200103d-ab16-431d-a732-7296952a25fc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Refresh",
+      "targets": [
+        ["linkText=Refresh", "linkText"],
+        ["css=a.btn.btn-primary", "css"],
+        ["css=.btn:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Refresh')]", "xpath:link"],
+        ["xpath=//body[@id='page-top']/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'tables.php')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "173644fb-a5cb-4776-abb3-3cb542c28181",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b1397c8d-1f05-4d28-b531-ff698e43093f"]
+  }],
+  "urls": ["http://localhost/"],
+  "plugins": []
+}

@@ -26,7 +26,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="timelog.php">
+          <a class="nav-link" href="tables.php">
             <i class="fa fa-fw fa-clock-o"></i>
             <span class="nav-link-text">Time Log</i></span>
           </a>
@@ -43,6 +43,16 @@
             <span class="nav-link-text">List of Employee</span>
           </a>
         </li>
+         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="attendance.php">
+            <i class="fa fa-fw fa-calendar"></i>
+            <span class="nav-link-text">Attendance</span>
+          </a> 
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="traning.php">
+            <i class="fa fa-fw fa-list"></i>
+            <span class="nav-link-text">Leaves</span>
+          </a> 
 
     
       </ul>
@@ -210,6 +220,7 @@
                                 $salary = $hours_worked * 65;
 
                                 
+
                                  if($hours_worked == 0){
                                 $total_salary = 0;
                                 $deducted = 0;

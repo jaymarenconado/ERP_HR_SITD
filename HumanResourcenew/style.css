@@ -1,0 +1,17 @@
+body{
+	margin: 0;
+	padding: 0;
+	background: url(mm.jpg);
+	background-size: cover;
+	font-family: none;
+
+}
+.loginBox
+{
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	width: 350px;
+	height: 420px;
+	background: rgba(0,0,0,.5); 
+}
