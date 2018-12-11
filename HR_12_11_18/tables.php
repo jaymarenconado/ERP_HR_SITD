@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Human Resources Management System</title>
+  <title>Human Resources - Wine Distillery</title>
   <!-- Bootstrap core CSS-->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
@@ -22,7 +22,7 @@
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     
-    <a class="navbar-brand" href="index.php">Human Resources Management System<i class="fa fa-fw fa-building"></i></a>
+    <a class="navbar-brand" href="index.php">Human Resources - Wine Distillery<i class="fa fa-fw fa-building"></i></a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -50,11 +50,7 @@
             <i class="fa fa-fw fa-calendar"></i>
             <span class="nav-link-text">Attendance</span>
           </a> 
-          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="traning.php">
-            <i class="fa fa-fw fa-list"></i>
-            <span class="nav-link-text">Leaves</span>
-          </a>   
+   
       </ul>
 
       <ul class="navbar-nav sidenav-toggler">
@@ -126,7 +122,7 @@
                   <td><?php echo $row['contact_no'];?></td>
                   <td><?php echo $row['address'];?></td>
                   <td><a href="update_emp.php?id=<?php echo $e_id;?>">Update</a> / 
-                      <a href="">Terminate</a>
+                      <a href="delete_employee.php?id=<?php echo $e_id;?>">Terminate</a>
                   </td>
                 </tr>
                 <?php $n++; } ?>
@@ -149,7 +145,7 @@
     </footer>
 
     <!-- Button trigger modal -->
-    <button class="btn btn-default" style="float: right;" data-toggle="modal" data-target="#myModal">Recruit<i class="fa fa-fw fa-plus"></i></button>
+    <button class="btn btn-info" style="float: right;" data-toggle="modal" data-target="#myModal">Recruit<i class="fa fa-fw fa-plus"></i></button>
     <a href="tables.php" class="btn btn-primary">Refresh<i class="fa fa-fw fa-refresh"></i></a>
 
 

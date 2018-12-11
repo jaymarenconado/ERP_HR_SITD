@@ -20,7 +20,7 @@
 
 <body class="bg-dark">
 
-  <a href="time_io.php" type="submit" name="submit" class="btn btn-primary ; " style="float: right;"><b style="font-size:20px";>Employee<i class="fa fa-fw fa-users"></i></b></a>
+  <a href="time_io.php" type="submit" name="submit" class="btn btn-info " style="float: right;"><b style="font-size:20px";>Employee<i class="fa fa-fw fa-users"></i></b></a>
   <br>
   <div class="container"><div class="card card-login mx-auto mt-5" >
       <div class="card-header" style="color:Blue; background:mm.jpg";><center><img src="mm.jpg"></center><h5 style="text-align: center;" >Admin - Login<i class="fa fa-fw fa-user"></i></h5>
@@ -67,6 +67,7 @@
             }
           }
         ?>
+
                                                         <center><small>Human Resource System </small></center>
       </div>
     </div>
